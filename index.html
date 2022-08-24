@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 alert-warning text-center shadow mt-3">
+                <h1>Users Registration Portal</h1>
+            </div>
+            <div class="col-md-3 offset-md-9 mt-3 p-0" id="msg">
+            </div>
+            <div class="col-md-6 offset-md-3">
+                <div class="signup-form">
+                    <form action="" id="myForm" class="mt-4 border p-4 bg-light shadow">
+                        <h4 class="mb-5 text-secondary text-center">SIGN UP</h4>
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label>Name<span class="text-danger">*</span></label>
+                                <input type="text" name="name" class="form-control" placeholder="Enter Your Name" id="nameid">
+                            </div>
+    
+                            <div class="mb-3 col-md-6">
+                                <label>Phone no<span class="text-danger">*</span></label>
+                                <input type="text" name="phone" class="form-control" maxlength="10" pattern="\d{10}" placeholder="Enter Your Phone no" id="phoneid">
+                            </div>
+    
+                            <div class="mb-3 col-md-12">
+                                <label>Email<span class="text-danger">*</span></label>
+                                <input type="email" name="email" class="form-control" placeholder="Enter Email" id="emailid">
+                            </div>
+
+                            <div class="mb-3 col-md-12">
+                                <label>Password<span class="text-danger">*</span></label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter Password" id="pwdid">
+                            </div>
+
+                            <div class="mb-3 col-md-12">
+                                <label>Confirm Password<span class="text-danger">*</span></label>
+                                <input type="password" name="confirmpassword" class="form-control" placeholder="" id="cpwdid">
+                            </div>
+
+                            <div class="col-md-12">
+                                <button class="btn btn-warning float-right ml-1" id="btnclear" type="reset" value="reset">CLEAR</button>
+                                <button class="btn btn-success float-right" id="btnadd">ADD</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row alert-warning shadow text-center mt-5" id="rsum">
+            <div class="col-md-6 offset-md-3">
+                <h2>Registered Users</h2>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12" id="tableid">
+                <table class="table table-striped table-light shadow">
+                    <thead>
+                      <tr class="alert-warning">
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone no</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-10" id="nextid">
+            <button class="btn btn-info float-right" id="nextbtn" onclick="window.location.href='/User%20Registration/second.html'">Next &raquo;</button>            
+        </div>
+    </div>
+    <script src="js/ajaxScript.js"></script>
+</body>
+</html>
